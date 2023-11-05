@@ -9,7 +9,7 @@ print (Firstname + surname) #Add firstname to  surname
 
 # Question 3
 answer = "A Gummy bear"
-print ("what do byou call a bear with no teeth\n", answer)
+print ("what do you call a bear with no teeth\n", answer)
 
 #Question 4
 B = int(input("Enter a number: "))
@@ -18,11 +18,11 @@ C = B + A
 print ("The total is", C)
 
 #question 5
-D = int(input("Enter a number: "))
-E = int(input("Enter a number: "))
-F = int(input("Enter a number: "))
+D = int(input("Enter first number: "))
+E = int(input("Enter second number: "))
+F = int(input("Enter third number: "))
 ans = (D + E) * F
-print ("the answer is", ans)
+print ("when you add the first and second number then mutilply by the third number the answer is", ans)
 
 # Question 6
 started = int(input(" number of pizza started with: "))
