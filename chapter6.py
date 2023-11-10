@@ -11,11 +11,24 @@ print("Question 2")
 num1 = 0
 while num1 <= 5: 
   num1 = int(input("Enter a number: "))
-  print(f"The last number you entered was  {num1}")
+  print(f"The last number you entered was  {num1}: ")
 
 #question 3
-print("Question 3")
-num2 = int(input("Enter A Number:  "))
+("Question 3")
+first_number = int(input("enter a number: "))
+total = first_number
+next_number = "y"
+while total == "y":
+  second_number = int(input("enter a number: "))
+  total = total + second_number
+  next_number = input("do you want another number: ")
+  print(f"This is the {total} total: ")
 
-# name = "efosa"
-# name = name + " odiase"
+  #Question 4
+  count = 0
+  next = "y"
+  while count == count + 1:
+    name = input("whats the name?: ")
+    count = count + 1
+    
+  
