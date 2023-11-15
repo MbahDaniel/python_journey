@@ -1,4 +1,5 @@
 import turtle
+
 turtle.shape("turtle")
 for i in range(0,4):
     turtle.forward (100)
@@ -125,3 +126,7 @@ lines = random.randint(1,10)
 for i in range (0,lines):
   length = random.randint(20,100)
   rotate = random.randint(0,360)
+  turtle.forward(length)
+  turtle.right(rotate)
+
+turtle.exitonclick()
