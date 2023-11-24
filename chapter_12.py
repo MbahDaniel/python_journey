@@ -50,7 +50,8 @@ for i in range (0,4):
     name = input("Enter a name: ")
     age = input("Enter age: ")
     shoe_size = ("Enter shoe size: ")
-    list[name] = [{"Age":age,"Shoe_size":shoe_size}]jhwbiijuuvuyhyvvu
+    list[name] = [{"Age":age,"Shoe_size":shoe_size}]
+    #NOT COMPLETED
 
 
 
