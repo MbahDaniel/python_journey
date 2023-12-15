@@ -149,7 +149,58 @@ def main():
 names = [] 
 main()
 
-#question 5
+#question 5:
+def add_file():
+    file = open("salaries.csv","a")
+    name = input("enter a name: ")
+    salary = int(input("what is your salary: "))
+    file.write(f"{name}+{str(salary)}")
+    file.close()
+
+def all_records():
+  file = open("salaries.csv","r")
+  for row in file:
+    print(row)
+    file.close()
+
+tryagain = "Yes"
+while tryagain == "Yes":
+  print("""
+1)Add to file 
+2)View all records
+3)Quit programs
+        """)
+select = int(input("Enter number from 1 to 3: "))
+if select == 1:
+  add_file()
+elif select == 2:
+  all_records()
+elif select == 3:
+  tryagain = "no"
+else:
+  print("incorrect option")
+
+
+#question 6
+def add_file():
+    file = open("salaries.csv","a")
+    name = input("enter a name: ")
+    salary = int(input("what is your salary: "))
+    file.write(f"{name}+{str(salary)}")
+    file.close()
+
+def all_records():
+  file = open("salaries.csv","r")
+  for row in file:
+    print(row)
+    file.close()
+
+
+
+
+
+
+
 
 
 
