@@ -1,14 +1,19 @@
 import sqlite3
 with sqlite3.connect("phone.db") as db:
     cursor = db.cursor()#connects to the phone database, if no such database exist,  create  a one.The file would be stored in the same folder as the  program
-cursor.execute(""" CREATE TABLE IF NOT EXISTS phone(
- id integer PRIMARY KEY,
+ID = 0
+again ="yes"
+while again =="yes":
+ cursor.execute(""" CREATE TABLE IF NOT EXISTS phone(
+ id integer PRIMARY KEY
+ ,
  firstname text NOT NULL,
  surname text NOT NULL,
  phonenumber integer);""")
 
-cursor.execute("""INSERT INTO phone(id,firstname,surname,phonenumber)
- VALUES("1","Simon","Howels","01223349752")""")
+cursor.execute(f"""INSERT INTO phone(id,firstname,surname,phonenumber)
+ VALUES("{ID}","Simon","Howels","01223349752")""")
+ID = ID +1
 db.commit()
 
 cursor.execute("""INSERT INTO phone(id,firstname,surname,phonenumber)
@@ -167,14 +172,32 @@ db.close()
 with sqlite3.connect ("bookinfo.db") as db:
     cursor = db.cursor()
     
-cursor.execute("SELECT * FROM Author")
+cursor.execute("SELECT * FROM Authors")
 for x in cursor.fetchall():
     print (x)
-cursor.execute("SELECT * FROM Place of birth")
+    
+print()
+POB =input("Enter place of birth: ")
+print()
+cursor.execute("""SELECT books.title,books.author, books.date  published * FROM books, Authors  WHERE Author.name = books.author AND authors.placeofbirth?""",[POB])
 for x in cursor.fetchall():
     print (x)
-DOB =input("Enter place of birth: ")
-cursor.execute("SELECT books.title,books.autho, books.date  published * FROM bookinfo WHERE place of birth = {DOB}")
+
+db.close
+
+#question 5
+with sqlite3.connect ("bookinfo.db") as db:
+    cursor = db.cursor
+
+year = int(input("enter a year: "))
+cursor.execute("""SELECT books.title,books.datepublished,books.Author FROM books WHERE datepublished>ORDER BY datepublished""",[year])
 for x in cursor.fetchall():
-    print (x)
-j
+    print(x)
+
+db.close()
+
+#question 6
+with sqlite3.connect ("bookinfo.db") as db:
+    cursor = db.cursor()
+
+
