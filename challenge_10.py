@@ -42,7 +42,7 @@ for i in name:
 
 
 #question 7
-word1 = input("enter a name: ").upper()
+word1=  input("enter a name: ").upper()
 word2 = input("enter a name: ")
 if word1 ==  word2:
     print("thank you")

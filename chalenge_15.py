@@ -195,6 +195,10 @@ def all_records():
     print(row)
     file.close()
 
+def delete():
+  file = open("salaries.csv","a")
+  change_record = int(input("Enter a number: "))
+
 
 
 

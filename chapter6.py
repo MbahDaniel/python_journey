@@ -71,10 +71,3 @@ while total == "y":
         else:
          remaining_bottle = int(input("No, try again: "))
          print("There are no more green bottles sitting on the wall: ")
-
-
-
-
-
-    
-  
