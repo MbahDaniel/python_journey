@@ -17,8 +17,8 @@ class post(BaseModel):
 my_post = [{"title":"title of post 1","content": "content of post 1","id":1},{"title":"favourite foods","content":"i  like pizza","id": 2}]
 
 def get_post_for_id(id):
- for i in my_post:
-  if i["id"] == id:
+ for p in my_post:
+  if p["id"] == id:
    return id
   
 def deleteam_post(id):
@@ -83,3 +83,4 @@ def update_post(id: int, post: post):
   post_dict["id"]= id
   post_dict = my_post[index]
   return{"data":post_dict}
+
